@@ -15,15 +15,15 @@ import imagemin from 'imagemin';
 import imageminSvgo from 'imagemin-svgo';
 
 await imagemin(['images/*.svg'], {
-	destination: 'build/images',
-	plugins: [
-		imageminSvgo({
-			plugins: [{
-				name: 'removeViewBox',
-				active: false
-			}]
-		})
-	]
+  destination: 'build/images',
+  plugins: [
+    imageminSvgo({
+      plugins: [{
+        name: 'removeViewBox',
+        active: false
+      }]
+    })
+  ]
 });
 
 console.log('Images optimized');
